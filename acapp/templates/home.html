@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title> Demo  App </title>
+	<style>
+		*{font-size:20px;font-familt:Arial;}
+	</style>
+	<script>
+		function validate()
+		{
+			var r = document.getElementById("id_num");
+			var a = document.getElementById("ans");
+			if(r.value == "" | r.value < 0)
+			{
+				alert("Check");
+				r.value = "";
+				r.focus();
+				a.textContent="";
+				return false;
+			}
+			else
+			{
+				return true;
+			}
+		}
+	</script>
+	
+</head>
+<body>
+	<center>
+		<h1> Demo App </h1>
+		<form method = "POST">
+		{% csrf_token %}
+			{{ ac }}
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+		<h2 id = "ans" >{{ msg }}</h2>
+
+	</center>
+</body>
+</html>

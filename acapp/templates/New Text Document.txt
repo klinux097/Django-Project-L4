@@ -1,0 +1,21 @@
+<html>
+<head>
+	<title> Demo  App </title>
+	<style>
+		*{font-size:20px;font-familt:Arial;}
+	</style>
+</head>
+<body>
+	<center>
+		<h1> Demo App </h1>
+		<form method = "POST">
+			{{ fm }}
+			<br>
+			<br>
+			<input type="submit">
+		</form>
+		{{ msg }}
+
+	</center>
+</body>
+</html>
